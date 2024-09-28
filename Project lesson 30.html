@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project for lesson 30</title>
+</head>
+<body>
+    <h3>Login (18+)</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <form name="form1" onsubmit="validateForm()"></form>
+        Name: <input type="text" name="myname"><br>
+        <p>You should be 18+ to acess this. </p>
+        Age:<input type="number" id="id0" min="18"><br>
+        <button onclick="validate()">Submit</button>
+    </form>
+    <script>
+    function validate(){
+            var value = document.getElementById("id0");
+            if(!value.checkValidity()){
+                document.getElementById("p1").innerHTML = value.validationMessage;
+            }
+            else {
+                document.getElementById("p1").innerHTML = "Input OK";
+            }
+        }
+    </script>
+</body>
+</html>
